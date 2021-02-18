@@ -1,0 +1,26 @@
+{
+  "name": "webpack_poc",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "webpack": "^5.23.0",
+    "webpack-cli": "^4.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goel-sunny/webpack-poc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goel-sunny/webpack-poc/issues"
+  },
+  "homepage": "https://github.com/goel-sunny/webpack-poc#readme"
+}
