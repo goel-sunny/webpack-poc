@@ -2,8 +2,9 @@
   "name": "webpack_poc",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "dependencies": {
+    "lodash": "^4.17.20",
     "webpack": "^5.23.0",
     "webpack-cli": "^4.5.0"
   },
