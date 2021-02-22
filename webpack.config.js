@@ -4,8 +4,15 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: "./src/index.js",
-    another: "./src/another_module.js"
+    main: {
+      import: "./src/index.js",
+      dependOn: "shared"
+    },
+    another: {
+      import: "./src/another_module.js",
+      dependOn: "shared"
+    },
+    shared: "lodash"
   },
   output: {
     filename: "[name].bundle.[contentHash].js",
