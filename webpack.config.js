@@ -43,5 +43,8 @@ module.exports = {
     ]
   },
   plugins: [new HtmlWebpackPlugin(), new CleanWebpackPlugin()],
-  mode: "production"
+  mode: "production",
+  optimization: {
+    runtimeChunk: "single"
+  }
 };
