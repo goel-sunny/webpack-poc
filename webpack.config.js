@@ -4,15 +4,8 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: {
-      import: "./src/index.js",
-      dependOn: "shared"
-    },
-    another: {
-      import: "./src/another_module.js",
-      dependOn: "shared"
-    },
-    shared: "lodash"
+    main: "./src/index.js",
+    another: "./src/another_module.js"
   },
   output: {
     filename: "[name].bundle.[contentHash].js",
@@ -45,6 +38,8 @@ module.exports = {
   plugins: [new HtmlWebpackPlugin(), new CleanWebpackPlugin()],
   mode: "production",
   optimization: {
-    runtimeChunk: "single"
+    splitChunks: {
+      chunks: "all"
+    }
   }
 };
