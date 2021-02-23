@@ -8,7 +8,7 @@ module.exports = {
     another: "./src/another_module.js"
   },
   output: {
-    filename: "[name].bundle.[contentHash].js",
+    filename: "[name].bundle.[contenthash].js",
     path: path.resolve(__dirname, "dist")
   },
   module: {
@@ -38,6 +38,7 @@ module.exports = {
   plugins: [new HtmlWebpackPlugin(), new CleanWebpackPlugin()],
   mode: "production",
   optimization: {
+    runtimeCheck: "single",
     splitChunks: {
       chunks: "all"
     }
