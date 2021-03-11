@@ -1,28 +1,33 @@
 {
-  "name": "webpack_poc",
+  "name": "side-panel",
   "version": "1.0.0",
-  "description": "",
-  "private": true,
+  "description": "Side Panel component for npm",
+  "main": "./lib/SidePanel.js",
   "dependencies": {
+    "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "lodash": "^4.17.20",
     "webpack": "^5.23.0",
     "webpack-cli": "^4.5.0"
   },
+  "publishConfig": {
+    "registry": "http://localhost:8081/artifactory/api/npm/TW_Repository/",
+    "access": "public"
+  },
   "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
     "css-loader": "^5.0.2",
     "csv-loader": "^3.0.3",
+    "html-webpack-plugin": "^5.2.0",
     "style-loader": "^2.0.0",
-    "xml-loader": "^1.2.1",
-    "html-webpack-plugin": "^5.2.0"
+    "xml-loader": "^1.2.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/goel-sunny/webpack-poc.git"
   },
   "author": "",
   "license": "ISC",
