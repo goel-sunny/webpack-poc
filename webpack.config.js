@@ -3,13 +3,11 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  entry: {
-    main: "./src/index.js",
-    another: "./src/another_module.js"
-  },
+  entry: "./src/components/side-panel.jsx",
   output: {
-    filename: "[name].bundle.[contenthash].js",
-    path: path.resolve(__dirname, "dist")
+    filename: "SidePanel.js",
+    path: path.resolve("lib"),
+    libraryTarget: "commonjs2"
   },
   module: {
     rules: [
@@ -32,15 +30,14 @@ module.exports = {
       {
         test: /\.xml$/i,
         use: ["xml-loader"]
+      },
+      {
+        test: /\.(jsx)$/,
+        exclude: /(node_modules)/,
+        use: "babel-loader"
       }
     ]
   },
-  plugins: [new HtmlWebpackPlugin(), new CleanWebpackPlugin()],
-  mode: "production",
-  optimization: {
-    runtimeCheck: "single",
-    splitChunks: {
-      chunks: "all"
-    }
-  }
+  plugins: [new CleanWebpackPlugin()],
+  mode: "production"
 };
